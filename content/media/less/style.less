@@ -1,12 +1,6 @@
 @import "bootstrap/responsive.less";
 @import "bootstrap/bootstrap.less";
 
-body {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-
 @gridColumns:             12;
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
@@ -28,253 +22,82 @@ body {
    Author: Nick DeMonner
    ========================================================================== */
 
+html {
+}
+
 body {
-  #gradient > .vertical-with-image('/img/circles.png', @grayLighter, @grayLight);
+  #gradient > .vertical-with-image('/media/img/circles.png', @grayLighter, @grayLight);
 }
 
 .container {
-  .container-fixed();
+  .container-fluid();
 }
 
-.center-stuff {
-  text-align:center;
+p {
+  color:#666;
 }
 
-.nav-pills .active > a {
-  color: @white;
-  background-color: @blue;
-  text-shadow: 0 0px 3px rgba(0,0,0,.5);
+.viewer {
+  margin-top:5px;
+  background-color:#eee;
+  border:1px solid #aaa;
+  .box-shadow(0 0 5px rgba(0,0,0,.25));
 }
 
-.nav-pills .active > a:hover {
-  color: @white;
-  background-color: lighten(@blue, 10%);
-  text-shadow: 0 0px 3px rgba(0,0,0,.5);
-}
+.sidebar {
+  padding:10px;
+  background-color: #ddd;
+  border-right: 1px solid #aaa;
 
-.hero-unit {
-  margin-top: 10px;
+  ul {
+    margin-left:0 !important;
 
-  #gradient > .vertical-with-image('/img/noise_trans.png', @darkerBlue, @darkBlue;
+    .nav-header {
+      color:#666;
+    }
 
-  h1 {
-    color:#fff;
-    font-size:46px;
-    text-shadow: 0 0px 3px rgba(0,0,0,.5);
-    line-height:50px;
-  }
-  p {
-    font-size: @baseFontSize;
-    line-height: @baseLineHeight;
-    color:#fff;
-    font-weight:bold;
-    text-shadow: 0 0px 3px rgba(0,0,0,.5);
-  }
+    li {
+      font-size:14px;
+      margin-left:10px;
 
-  .border-radius(8px);
-  .box-shadow(0 0 5px rgba(0,0,0,.65));
+      a {
+        color: #888;
+        text-shadow: 0 1px 0 rgba(255,255,255,1);
+      }
 
-  > img {
-    .box-shadow(0 0 7px rgba(0,0,0,.55));
-  }
-
-  strong {
-    text-decoration:underline;
+      a:hover {
+        color: #666;
+        text-shadow: 0 1px 0 rgba(255,255,255,1);
+        background-color: #ddd;
+      }
+    }
   }
 }
 
-.spacer {
-  margin-top:25px;
+.nav-list .active > a {
+  color: #666;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  background-color: #ddd;
 }
 
-h4, .sub-clause {
-  padding-left: 40px;
+.nav-list .active > a:hover {
+  color: #666;
+  background-color: #ddd;
 }
 
-.chalkboard {
-  margin-top:30px;
+.document {
+  padding:10px;
+  padding-left:30px;
+  margin-left:0 !important;
+}
+
+.logo {
+  margin-top:20px;
+  height:50px;
 }
 
 footer {
   margin-top:25px;
-  text-align:center;
-}
-
-.plans {
-  margin-top:25px;
-  margin-left:0;
-}
-
-.last {
-  margin-right:0;
-}
-
-.mercury {
-  background: url('/img/circles.png') @darkBlue;
-  border: 1px @blue solid;
-}
-.vulcan {
-  background: url('/img/circles.png') mix(@darkBlue, @darkGreen, 75%);
-  border: 1px mix(@blue, @green, 75%) solid;
-}
-.minerva {
-  background: url('/img/circles.png') mix(@darkBlue, @darkGreen, 50%);
-  border: 1px mix(@blue, @green, 50%) solid;
-}
-.neptune {
-  background: url('/img/circles.png') mix(@darkBlue, @darkGreen, 25%);
-  border: 1px mix(@blue, @green, 25%) solid;
-}
-.jupiter {
-  background: url('/img/circles.png') @darkGreen;
-  border: 1px @green solid;
-}
-
-.plans > li {
-  width:150px;
-  margin-right:15px;
-  height:250px;
-  float:left;
-  text-align:center;
-  list-style:none;
-
-  .box-shadow(0 0 7px rgba(0,0,0,.45));
-  .border-radius(16px);
-  
-  h2,h3,h4 {
-    color:#fff;
-    text-shadow: 0 0px 3px rgba(0,0,0,.5);
-    small {
-      color:#ddd;
-    }
-  }
-}
-
-.plans > li > h2 {
-  margin-top:20px;
-}
-
-.plans > li > h2.price {
-  background:fadeout(@black, 80%);
-  margin-top:10px;
   margin-bottom:25px;
-}
-
-.overview {
-  background-color: #fff;
-  padding:60px;
-  .border-radius(8px);
-  .box-shadow(0 0 5px rgba(0,0,0,.35));
-
-  .pull-up {
-    margin-top:-15px;
-    margin-bottom:20px;
-  }
-}
-
-.overview2 {
-  margin-top:10px;
-
-  background-color: #fff;
-  padding:60px;
-  .border-radius(8px);
-  .box-shadow(0 0 5px rgba(0,0,0,.35));
-
-  .pull-up {
-    margin-top:-15px;
-    margin-bottom:20px;
-  }
-}
-
-.top-nav {
-  float: right;
-  > li {
-    margin-top:25px;
-    a.btn {
-      .border-radius(16px);
-      color:#555;
-      text-shadow: 0 1px 1px rgba(255,255,255,.75);
-    }
-
-    a.btn:hover {
-      color: @grayDark;
-      text-decoration: none;
-      background-color: darken(@white, 20%);
-      background-position: 0 -15px;
-
-      // transition is only when going to hover, otherwise the background
-      // behind the gradient (there for IE<=9 fallback) gets mismatched
-      .transition(background-position .1s linear);
-    }
-
-    a {
-      .border-radius(16px);
-      color:#777;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.5);
-    }
-
-    a:hover {
-      color:#555;
-    }
-  }
-}
-
-.pull-up20 {
-  margin-top:-20px;
-}
-
-.less-vibrant {
-  color:#666;
-}
-
-.supported {
-  padding-left:40px;
-}
-
-.watson {
-  margin-left:30px;
-  margin-top:15px;
- .box-shadow(0px 0px 7px rgba(0,0,0,.55));
-}
-
-.code-pic {
-  margin-left:30px;
-  margin-top:25px;
- .box-shadow(0px 0px 7px rgba(0,0,0,.75));
-}
-
-.move-down {
-  padding-top: 50px;
-}
-
-.move-down25 {
-  padding-top: 25px;
-}
-
-.btn {
-  .border-radius(16px);
-}
-
-.btn-primary {
-  border-bottom:none;
-}
-
-hr {
-  border-bottom: 1px fadeout(@black, 80%) solid;
-}
-
-h1, h2, h3 {
-  color: #202020;
-  font-family: 'Cabin', sans-serif;
-}
-
-.float-right {
-  float: right;
-}
-
-p {
-  color:#555;
-  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
-  margin-top:8px;
-  text-align: justify;
+  text-align:center;
 }
